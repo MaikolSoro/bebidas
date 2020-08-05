@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-export const RecetasContest = createContext ();
+export const RecetasContext = createContext ();
 
 
 const RecetasProvider = (props) => {
@@ -11,13 +11,13 @@ const RecetasProvider = (props) => {
 		categoria: ''
 	})
 	return (  
-		<RecetasContest.Provider
+		<RecetasContext.Provider
 			value={{
 				buscarRecetas
-			}}
+			}}	
 		>
 			{ props.children }
-		</RecetasContest.Provider>
+		</RecetasContext.Provider>
 	);
 }
  
