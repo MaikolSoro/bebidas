@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useContext, useState } from 'react';
 import { ModalContext } from '../context/ModalContext';
 import Modal from '@material-ui/core/Modal';
@@ -41,7 +42,7 @@ const Receta = ({receta}) => {
 		setOpen(false);
 	}
 	//extraer los valores del context
-	const { guardarIdReceta } = useContext(ModalContext);
+	const { info, guardarIdReceta, guadarReceta } = useContext(ModalContext);
 
 	return ( 
 		<div className="col-md-4 mb-3">
@@ -65,11 +66,20 @@ const Receta = ({receta}) => {
 						onClose={() => {
 							
 							guardarIdReceta(null);
+							// guadarReceta({});
 							handleClose();
 						}}
 					>
 						<div style={modalStyle} className={classes.paper}>
-							<h1>Desde Modal</h1>
+							<h2>{info.strDrink}</h2>
+							<h3 className="mt-4">Instrucciones</h3>
+							<p>
+								{info.strInstructions}
+							</p>
+							<img className="img-fluid my-4" 
+								 src={info.strDrinkThumb} 
+
+							/>
 						</div>
 					</Modal>
 				</div>
