@@ -9,7 +9,7 @@ const Formulario = () => {
 		categoria: ''
 	});
 	const { categorias } = useContext(CategoriasContext);
-	const { buscarRecetas } = useContext(RecetasContext);
+	const { buscarRecetas, guardarConsultar } = useContext(RecetasContext);
 	
 	// función para leer los contenidos
 	const obtenerDatosReceta = e => {
@@ -26,6 +26,7 @@ const Formulario = () => {
 			onSubmit={ e => {
 				e.preventDefault();
 				buscarRecetas(busqueda);
+				guardarConsultar(true);
 			}}
 		>
 			<fieldset className="text-center">
@@ -44,6 +45,7 @@ const Formulario = () => {
 				<div className="col-md-4">
 					<select className="form-control"
 							name="categoria"
+							onChange={obtenerDatosReceta}
 					>
 					<option value="">--Selecciona Categoría---</option>
 					{categorias.map(categoria => (
