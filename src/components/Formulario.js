@@ -45,6 +45,7 @@ const Formulario = () => {
 				<div className="col-md-4">
 					<select className="form-control"
 							name="categoria"
+							onChange={obtenerDatosReceta}
 					>
 					<option value="">--Selecciona Categoría---</option>
 					{categorias.map(categoria => (
