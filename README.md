@@ -1,6 +1,8 @@
 
 ## Drink finder🥤🍹🌐 
 It is a website, which is about searching for different drink recipes, using context api.
+## ✔ Technologies
+- [ReactJS Documentation](https://es.reactjs.org/)
 
 ## 🚀 Installation
    ## Prerequisites
