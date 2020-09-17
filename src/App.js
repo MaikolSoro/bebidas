@@ -1,26 +1,26 @@
-import React from 'react';
-import Header from './components/Header';
-import Formulario from './components/Formulario';
-import ListaRecetas from './components/ListaRecetas';
-import CategoriasProvider from './context/CategoriasContext';
-import RecetasProvider from './context/RecetasContext';
-import ModalProvider from './context/ModalContext';
+import React from "react";
+import Header from "./components/Header";
+import Form from "./components/Form";
+import ListRecipes from "./components/ListRecipes";
+import CategoriesProvider from "./context/CategoriesContext";
+import RecipesProvider from "./context/RecipesContext";
+import ModalProvider from "./context/ModalContext";
 
 function App() {
   return (
-    <CategoriasProvider>
-      <RecetasProvider>
+    <CategoriesProvider>
+      <RecipesProvider>
         <ModalProvider>
           <Header />
           <div className="container mt-5">
             <div className="row">
-              <Formulario />
+              <Form />
             </div>
-              <ListaRecetas />
+            <ListRecipes />
           </div>
         </ModalProvider>
-      </RecetasProvider>
-    </CategoriasProvider>
+      </RecipesProvider>
+    </CategoriesProvider>
   );
 }
 
