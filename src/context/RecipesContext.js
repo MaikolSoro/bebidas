@@ -8,7 +8,7 @@ const RecipesProvider = (props) => {
   const [search, searchRecipes] = useState({
     name: "",
     category: "",
-  });
+  }); // git
   const [consult, saveConsult] = useState(false);
 
   const { name, category } = search;
