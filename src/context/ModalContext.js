@@ -9,7 +9,6 @@ const ModalProvider = (props) => {
 
   const [idrecipe, saveIdRecipe] = useState(null);
   const [info, saveRecipe] = useState({});
-  // git in vim
   // once we have a recipe, call the api
   useEffect(() => {
     const getRecipe = async () => {

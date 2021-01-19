@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { CategoriesContext } from "../context/CategoriesContext";
 import { RecipesContext } from "../context/RecipesContext";
-
+// config git example
 const Form = () => {
   const [search, saveSearch] = useState({
     name: "",

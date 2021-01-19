@@ -9,7 +9,7 @@ const CategoriesProvider = (props) => {
   // create the state of the Context
   const [categories, saveCategories] = useState([]);
 
-  // execute the call to the api
+  //execute the call to the api
   useEffect(() => {
     const getCategories = async () => {
       const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
